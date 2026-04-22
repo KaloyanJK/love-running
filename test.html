@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor Spotlight</title>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    main {
+        height: 100vh;
+        background: #111;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Dark overlay with a "hole" */
+    .spotlight {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
+            circle 100px at var(--x) var(--y),
+            transparent 0%,
+            rgba(0, 0, 0, 0.95) 100%
+        );
+    }
+
+    section {
+        width: 500px;
+        height: 500px;
+        background: teal;
+        margin: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+</style>
+</head>
+
+<body>
+
+<main>
+    <section></section>
+    <div class="spotlight"></div>
+</main>
+
+<script>
+    const spotlight = document.querySelector('.spotlight');
+
+    document.addEventListener('mousemove', (e) => {
+        spotlight.style.setProperty('--x', e.clientX + 'px');
+        spotlight.style.setProperty('--y', e.clientY + 'px');
+    });
+</script>
+
+</body>
+</html>
