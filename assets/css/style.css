@@ -141,27 +141,9 @@ main {
     padding: 0 20px;
 }
 
-#benefits hr {
+hr {
     border-top: 1px solid #3a3a3a;
     margin-top: 5px 0;
-}
-
-#circle-cover-bg {
-    background: url("../images/reasons-image.webp") no-repeat top center / cover;
-    height: 90vh;
-    width: 90vw;
-    margin-bottom: 20px;
-    /* Make the square image in to a circle */
-    border-radius: 50%;
-    /* Max width and height so the circle looks good on all devies */
-    max-width: 300px;
-    max-height: 300px;
-}
-
-#benefits-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Footer */
